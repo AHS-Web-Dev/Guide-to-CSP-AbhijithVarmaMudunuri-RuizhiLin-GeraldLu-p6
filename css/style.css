@@ -3007,6 +3007,45 @@ input[type="button"].btn-block {
     .custom-control-input:disabled ~ .custom-control-label::before {
       background-color: #e9ecef; }
 
+
+h1 {
+    text-align: center;
+}
+
+#title {
+    text-decoration: none;
+}
+
+#quiz {
+    text-indent: 10px;
+    display:none;
+}
+
+
+#container {
+    width:50%;
+    margin:auto;
+    background-color: transparent;
+    border-radius:5px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#prev {
+    display:none;
+}
+
+#start {
+    display:none;
+    width: 90px;
+}
+
 .custom-control-label {
   position: relative;
   margin-bottom: 0; }
@@ -7408,6 +7447,14 @@ textarea.form-control {
     color: black; }
     .btn.btn-outline-white:hover, .btn.btn-outline-white:focus {
       background: black;
+      color: white;
+      border-width: 2px; }
+  .btn.btn-outline-black {
+    border-width: 2px;
+    border-color: #fd5f00;
+    color: white; }
+    .btn.btn-outline-black:hover, .btn.btn-outline-black:focus {
+      background: #fd5f00;
       color: white;
       border-width: 2px; }
   .btn:hover {
