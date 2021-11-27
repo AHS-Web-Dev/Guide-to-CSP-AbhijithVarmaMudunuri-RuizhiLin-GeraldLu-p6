@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-
+    <link rel="stylesheet" href="css/calcstyle.css">
     <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
 
@@ -27,62 +27,55 @@
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span id=navbar class="navbar-toggler-icon"></span>
           </button>
-          <div class="fab-container">
-            <div class="fab fab-icon-holder">
-              <img style="height:100%;width: 100%"; src="images/icon.png">
-              <i style="color:transparent;";class="fas fa-question"></i>
-            </div>
-            <ul class="fab-options">
-            <iframe src="https://avms-calculator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="272px" allowfullscreen></iframe>     </div>
           </div>
 
 
           <div class="collapse navbar-collapse" id="navbarsExample05">
             <ul class="navbar-nav pl-md-5 ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li>
-                <a class="nav-link" href="about.html">Chapters</a>
-
-              </li>
-                <a class="nav-link" href="about.html">Quizzes</a>
-
+                <a class="nav-link active" href="index.html">Home</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+                <a class="nav-link dropdown-toggle" href="Resources.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Chapters</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <a class="dropdown-item" href="services.html">Architectural Design</a>
+                  <a class="dropdown-item" href="services.html">Interior</a>
+                  <a class="dropdown-item" href="services.html">Building</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="Resources.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Quizzes</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown04">
+                  <a class="dropdown-item" href="services.html">Architectural Design</a>
+                  <a class="dropdown-item" href="services.html">Interior</a>
+                  <a class="dropdown-item" href="services.html">Building</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="Resources.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown04">
                   <a class="dropdown-item" href="emulator.html">Python Emulator</a>
                   <a class="dropdown-item" href="calculator.html">Calculator</a>
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="about.html">About</a>
+                <a class="nav-link" href="about.html">About</a>
               </li>
             </ul>
-          <div class="fab-container">
-            <div class="fab fab-icon-holder">
-              <img style="height:100%;width: 100%"; src="images/icon.png">
-              <i style="color:transparent;";class="fas fa-question"></i>
-            </div>
-            <ul class="fab-options">
-            <iframe src="https://avms-calculator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="600px" width="372px" allowfullscreen></iframe>     </div>
           </div>
         </div>
       </nav>
     </header>
     <!-- END header -->
 
+
     <div class="top-shadow"></div>
 
     <div class="inner-page">
-    <div class="slider-item" style="background-image: url('images/stock.jpg');">
+    <div class="slider-item" style="background-image: url('images/math.jpg');">
         
         <div class="container">
           <div class="row slider-text align-items-center justify-content-center">
             <div class="col-md-8 text-center col-sm-12 element-animate pt-5">
-              <h1 class="pt-5"><span>Binary Numbers Quiz</span></h1>
-              <p class="mb-5 w-75 pl-0">5 Questions<br> Good Luck!</p>
+              <h1 class="pt-5"><span>Arithmetic Calculator</span></h1>
             </div>
           </div>
         </div>
@@ -91,26 +84,50 @@
     </div>
     <!-- END slider -->
     </div>
-
-    <section class="section border-bottom">
+    
+    <section class="section border-t pb-0">
       <div class="container">
-              <div id='title'>
-                <h1>Binary Numbers Quiz</h1>
-                </div>
-                <br/>
-                <div id='quiz'></div>
-                <div style='text-align: right'; class='button' id='next'><a href='#'>Next</a></div>
-                <div style='text-align: right'; class='button' id='prev'><a href='#'>Prev</a></div>
-                <div style='text-align: right'; class='button'  id='start'> <a href='#'>Start Over</a></div>
-              </div>
-            </div>
-          </div>
+        <div class="row justify-content-center mb-5 element-animate">
+<div id="container">
+			<div id="calculator">
+				<div id="result">
+					<div id="history">
+						<p id="history-value"></p>
+					</div>
+					<div id="output">
+						<p id="output-value"></p>
+					</div>
+				</div>
+				<div id="keyboard">
+					<button class="operator" id="clear">C</button>
+					<button class="operator" id="backspace">CE</button>
+					<button class="operator" id="%">%</button>
+					<button class="operator" id="/">&#247;</button>
+					<button class="number" id="7">7</button>
+					<button class="number" id="8">8</button>
+					<button class="number" id="9">9</button>
+					<button class="operator" id="*">&times;</button>
+					<button class="number" id="4">4</button>
+					<button class="number" id="5">5</button>
+					<button class="number" id="6">6</button>
+					<button class="operator" id="-">-</button>
+					<button class="number" id="1">1</button>
+					<button class="number" id="2">2</button>
+					<button class="number" id="3">3</button>
+					<button class="operator" id="+">+</button>
+					<button class="empty" id="empty"></button>
+					<button class="number" id="0">0</button>
+					<button class="empty" id="empty"></button>
+					<button class="operator" id="=">=</button>
+				</div>
+				<h1 style="color:black; font-size: 20px;text-align: center;">Created by AVM</h1>
+			</div>
+		</div>
         </div>
       </div>
+    </div>
+    <!-- END .block-4 -->
     </section>
-
-
-
 
        <footer style="background-color: #1a0600"; class="site-footer" role="contentinfo">
         <div class="row">
@@ -135,7 +152,8 @@
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/binaryquiz.js"></script>
+    <script src="js/calc.js"></script>
+    <script src="js/main.js"></script>
     
   </body>
 </html>
