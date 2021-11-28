@@ -51,6 +51,11 @@ html {
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent; }
 
+
+ .tab { 
+  margin-left: 40px; }
+
+
 @-ms-viewport {
   width: device-width; }
 
