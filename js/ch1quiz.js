@@ -1,6 +1,6 @@
 (function() {
   var questions = [{
-    question: "CS is the study of the uses and application of computers and software; True or False"
+    question: "CS is the study of the uses and application of computers and software; True or False",
     choices: ['True', 'False'],
     correctAnswer: 1
   }, {
@@ -9,7 +9,7 @@
     correctAnswer: 1
   }, {
     question: "How many generations of computers do we have?",
-    choices: [2, 3, 4, 5, 6],
+    choices: [ 2, 3, 4, 5, 6],
     correctAnswer: 3
   }, {
     question: "What is a well ordered collection of unambiguous/clear and effectively computable operations that reach a result in a finite period of time",
@@ -17,7 +17,7 @@
     correctAnswer: 4
   }, {
     question: "What generation invented minicomputers?",
-    choices: [1, 4, 5, 3, 2],
+    choices: [ 1, 4, 5, 3, 2],
     correctAnswer: 3
   }];
   
