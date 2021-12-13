@@ -1877,25 +1877,14 @@
     <script>ace.require("ace/ext/language_tools"); var editor = ace.edit("editor"); ace.require('ace/ext/settings_menu').init(editor); var editor_cnt = 1, editor_index = 1, active_editor = 1, editor_session = []; var request, init_ts, open_file_name; var lang = 'python3'; default_content = "\
 \n\
 # Python IDE created by AVM\n\
-class MyClass:\n\
-    variable = 'blah'\n\
 \n\
-    def function(self):\n\
-        print('This is a message inside the class.')\n\
-\n\
-myobjectx = MyClass()\n\
-myobjecty = MyClass()\n\
-\n\
-myobjecty.variable = 'yackity'\n\
-\n\
-# Then print out both values\n\
-print(myobjectx.variable)\n\
-print(myobjecty.variable)\n\
+astring = 'Hello world!'\n\
+print(astring.index('o'))\n\
 \n\
 "; var prev_result = 'in'; var site_url = "https://www.online-python.com/"
         var base_url = "https://www.online-python.com/"
         var share_url = base_url; var exe_cnt = 0; var addthis_share = { url: share_url, }
-        var csrf_token_age = 23'ci_csrf_token'
+        var csrf_token_name = 'ci_csrf_token'
         var csrf_token = ''
         var isMobile = window.orientation > -1; toastr.options = { "closeButton": true, "debug": false, "newestOnTop": true, "positionClass": "toast-top-right", "preventDuplicates": true, "preventOpenDuplicates": true, "maxOpened": 1, "onclick": null, "showDuration": "100", "hideDuration": "1000", "timeOut": "3000", "extendedTimeOut": "1000", "showEasing": "swing", "hideEasing": "linear", }; var instance = Split(['#mi', '#d'], { direction: 'vertical', sizes: [65, 60], gutterSize: 0, cursor: 'row-resize', minSize: [0, 180], onDrag: function () { editor.resize(); }, }); function term_expand() {
             var element = document.getElementById('term-expand').innerHTML; if (element === '<i class="fas fa-expand-alt fa-lg"></i>') { instance.setSizes([0, 94]); editor.resize(); document.getElementById('term-expand').innerHTML = '<i class="fas fa-compress-alt fa-lg"></i>' } else { instance.setSizes([65, 60]); editor.resize(); document.getElementById('term-expand').innerHTML = '<i class="fas fa-expand-alt fa-lg"></i>' }
