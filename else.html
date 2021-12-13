@@ -1878,10 +1878,22 @@
 \n\
 # Python IDE created by AVM\n\
 \n\
-x = 1\n\
-if x == 1:\n\
-    # indented four spaces\n\
-    print('x is 1.')\n\
+# Prints out 0,1,2,3,4 and then it prints 'count value reached 5'\n\
+\n\
+count=0\n\
+while(count<5):\n\
+    print(count)\n\
+    count +=1\n\
+else:\n\
+    print('count value reached %d' %(count))\n\
+\n\
+# Prints out 1,2,3,4\n\
+for i in range(1, 10):\n\
+    if(i%5==0):\n\
+        break\n\
+    print(i)\n\
+else:\n\
+    print('this is not printed because for loop is terminated because of break but not due to fail in condition')\n\
 \n\
 "; var prev_result = 'in'; var site_url = "https://www.online-python.com/"
         var base_url = "https://www.online-python.com/"

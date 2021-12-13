@@ -131,7 +131,7 @@
             var __ez_fad_initslot = {}; var __ez_fad_fastd = []; var __ez_fad_fastdiv = []; var __ez_fad_fastslots = []; var __ez_fad_viewslots = []; var __ez_fad_instaslots = []; var ezslit_run = []; var __ez_fad_divs = [[], [], [], [], [], [], []]; __ez_fad_divpos = {}; var __ez_fad_divsd = []; var __ez_fad_vw = window.screen.width; var __ez_fad_vh = window.screen.height; var __ez_fad_count = 0; function __ez_fad_invisible(e) { !!(e.offsetWidth || e.offsetHeight || e.getClientRects().length) }
             function __ez_fad_position(id) {
                 var did = document.getElementById(id); if (did != null) {
-                    var rect = did.getBoundingClientRect(); var || document.body.scrollTop || document.documentElement.scrollTop; var vh = vs + __ez_fad_vh; _ez_fad_vw = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth; __ez_fad_vh = window.innerHeight || Math.max(document.documentElement.clientHeight, document.body.clientHeight); var height_adjust = 800; if (__ez_fad_vw < 1200) { height_adjust = __ez_fad_vh * 1.25; vh += 0; }
+                    var rect = did.getBoundingClientRect(); var vh = vs + __ez_fad_vh; _ez_fad_vw = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth; __ez_fad_vh = window.innerHeight || Math.max(document.documentElement.clientHeight, document.body.clientHeight); var height_adjust = 800; if (__ez_fad_vw < 1200) { height_adjust = __ez_fad_vh * 1.25; vh += 0; }
                     if (__ez_fad_floating.indexOf(id) == -1) {
                         __ez_fad_divpos[id] = rect.top; if (__ez_fad_invisible(did) && isFloat != true) { __ez_fad_divs[4].push(id); } else if (rect.top < vh && (ezslit_run[0] != true || ezslit_run[5] != true)) { if (ezslit_run[0] != true) { __ez_fad_gpt(); __ez_fad_divs[0].push(id); } else { __ez_fad_divs[5].push(id); } } else if (rect.top < (vh + height_adjust) && ezslit_run[1] != true) { if (ezslit_run[0] != true) { __ez_fad_load(0, 0); }; __ez_fad_divs[1].push(id); } else if (rect.top < (vh + height_adjust + (__ez_fad_vh)) && ezslit_run[2] != true) {
                             if (ezslit_run[0] != true) { __ez_fad_load(0, 0); }
@@ -155,7 +155,7 @@
                 if (document.body !== null && (__ez_fad_haspo == false && __ez_fad_doc_ht > __ez_fad_vp_ht || __ez_fad_hascp) || document.readyState === "complete") { return true; } else { __ez_fad_doc_ht = __ez_fad_docht(); __ez_fad_vp_ht = __ez_fad_vpht(); }
                 return false;
             }
-            function __ez_fad_docht() { if (typeof document.body != 'undefined' && document.body != null) else if (typeof document.documentElement != 'undefined') { return Math.max(document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight); } else { return 0; } }
+            function __ez_fad_docht() { if (typeof document.body != 'undefined' && document.body != null) else if (typeof document.documentElement != 'undefined') { return Math.max(document.documentElement.clientHeight, document.documentElement.offsetHeight); } else { return 0; } }
             function __ez_fad_vpht() {
                 if (typeof window.innerHeight != 'undefined') { return window.innerHeight; } else if (typeof document.body != 'undefined' && document.body != null) { return document.body.clientHeight; } else if (typeof document.documentElement != 'undefined') { return document.documentElement.clientHeight; }
                 else { return 0; }
@@ -704,7 +704,6 @@
             z-index: 1050;
             display: none;
             overflow: hidden;
-            -webkit-overflow-scrolling: touch;
             outline: 0
         }
 
@@ -919,7 +918,6 @@
             --carbon-ad-bg: repeating-linear-gradient(-45deg, transparent, transparent 5px, hsla(0, 0%, 0%, .025) 5px, hsla(0, 0%, 0%, .025) 10px) hsla(203, 11%, 95%, .4);
             --min-width: 320px;
             background-color: var(--body-background-color);
-            overflow-x: scroll;
             font-family: source sans pro, helvetica neue, Helvetica, Arial, sans-serif
         }
 
@@ -1878,10 +1876,8 @@
 \n\
 # Python IDE created by AVM\n\
 \n\
-x = 1\n\
-if x == 1:\n\
-    # indented four spaces\n\
-    print('x is 1.')\n\
+myint = 7\n\
+print(myint)\n\
 \n\
 "; var prev_result = 'in'; var site_url = "https://www.online-python.com/"
         var base_url = "https://www.online-python.com/"

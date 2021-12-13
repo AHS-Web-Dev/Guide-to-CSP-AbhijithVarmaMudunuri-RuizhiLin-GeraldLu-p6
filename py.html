@@ -104,7 +104,7 @@
         
         <div class="row justify-content-center">
           <div class="col-md-8">
-            <h4>Attributes of Algorithms</h4>
+            <h2>Printing</h2>
             <p>
               Python is a very simple language, and has a very straightforward syntax. It encourages programmers to program without boilerplate (prepared) code. The simplest directive in Python is the "print" directive - it simply prints out a line (and also includes a newline, unlike in C).
 </p>
@@ -119,59 +119,225 @@
             <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
             <br>
             <br>
-            <h3>Indentation</h3>
+            <h4>Indentation</h4>
             <p>
               Python uses indentation for blocks, instead of curly braces. Both tabs and spaces are supported, but the standard indentation requires standard Python code to use four spaces. For example:
             </p>             
             <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
             <br>
             <br>
-            <p>Correctness -This is a major attribute as the algorithm defeats its purpose if it cannot yield correct results </p>
-            <p class="tab">Does the algorithm yield correct results?</p>
-            <p class="tab">Does it finish what it was intended to do?</p>
-            <p class="tab"> Ask these questions to test the correctness of an algorithm</p>
-            <p>Clarity - How easy the algorithm is understood</p>
-            <p class="tab">If an algorithm is ambiguous and hard to understand, then it lacks clarity</p>
-            <p>Elegance - Essentially the style of your algorithm (how it solves the problem)</a></p>
-            <p class="tab">Elegance usually comes in conflict with clarity</p>
-            <p>Efficiency - How much memory the algorithm takes up</a></p>
-            <p class="tab">How well does the algorithm utilize the resources given?</p>
-            <p class="tab">Does the algorithm take a long time to execute or does it take up too much storage?</p>
-            <p class="tab">Ask these questions to determine efficiency</p>
-            <p>Benchmarking (Not an attribute) - How different inputs can affect the time the algorithm takes to yield results</p>
+            <h2>Variables</h3>
+            <p>
+              Python is completely object oriented, and not "statically typed". You do not need to declare variables before using them, or declare their type. Every variable in Python is an object.
+            </p>
             <br>
-            <h4>Measuring Efficiency</h4>
-            <p>Sequential Search</p>
-            <p class="tab">Comparing the wanted value with every value in the given list</p>
-            <p class="tab">If the list is n numbers long, 1 is the best case, n is the worst case, and n/2 is the average case</p>
-            <p>Order of Magnitude - Order n</p>
-            <p class="tab">If n is the length of a list, then the order of mangnitude varies based on the value of n</p>
-            <p>Selection Sort</p>
-            <p class="tab">A marker splits a list into unsorted and sorted sections (marker starts on the end of the list at the beginning so there is no sorted section yet)</p>
-            <p class="tab">Then, the largest value in the unsorted list is found and it is switched with the last number in the unsorted section of the list (to the left of the marker)</p>
-            <p class="tab">The marker then moves passed the largest value that was just switched (that number is now in the sorted section of the list) </p>
-            <p>Order of Magnitude - Order n^2</p>
-            <p class="tab">An example of an order of magnitude of n^2 is the selection sort algorithm as it does not simply follow the pattern of n.</p>
-            <h4>Analysis of Algorithms</h4>
-            <p>Data Cleanup Algorithms</p>
-            <p class="tab">Data Cleanup Algorithms seek to remove values in a list that do not make sense</p>
-            <p class="tab">The Shuffle-Left Algorithm</p>
-            <p style='margin-left: 80px';>Put left pointer finger at the start of the list and right at the second number on the list. Move the right finger down the list and keeping going until a zero or a value that does not make sense is reached. If a zero is reached, everything to the left of the zero is moved left 1 cell. The right finger resets once the whole list is scanned and the process repeats.</p>
-            <p class="tab">The Copy-Over Algorithm</p>
-            <p style='margin-left: 80px';>The list looks from left to right and transfers all non zero digits to a second list. This takes up a lot of space because the orignial list remains and the new list is also created.</p>
-            <p class="tab">The Converging-Pointers Algorithm</p>
-            <p style='margin-left: 80px';>A pointer is placed at the beginning and at the end of the list. The left pointer the list for not legitimate numbers. When a not legitimate number is reached, the number at the right pointer is copied to the left pointer. Then, the right pointer moves right one space.</p>
-            <p>Binary Search</p>
-            <p class="tab">Requires a sorted list. The number in the middle of the list is checked and if it is equal to the number that is being searched, then the algorithm stops. However, if the middle number is not equal to the middle number of the list, the algorithm checks if the middle number is higher or lower than the number being searched. If the number being searched is lower than the middle number, then the list is will be searched at the lower half. The opposite applies if the number being searched is higher than the middle number. </p>
-            <p>Pattern Matching</p>
-            <p class="tab">The algorithm scans the text and tries to match patterns in the list with the pattern that needs to be found. The number of comparisons is determined by the expression n-m+1</p>
-            <p style='margin-left: 80px';>Note: Check the chart on page 131 of the textbook for the order of magnitudes of each type of algorithm. </p>
+            <h4>Numbers</h4>
+            <p>
+              Python supports two types of numbers - integers(whole numbers) and floating point numbers(decimals). (It also supports complex numbers, which will not be explained in this tutorial).
+            </p>
+            <p>
+            To define an integer, use the following syntax:
+            </p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <p>To define a floating point number, you may use one of the following notations:</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <h2>Strings</h2>
+            <p>Strings are defined either with a single quote or a double quotes.</p>
+            <p>To define a floating point number, you may use one of the following notations:</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <p>Mixing operators between numbers and strings is not supported:</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <h2>Lists</h2>
+            <p>Lists are very similar to arrays. They can contain any type of variable, and they can contain as many variables as you wish. Lists can also be iterated over in a very simple manner. Here is an example of how to build a list.</p>
+            <p>Mixing operators between numbers and strings is not supported:</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <h2>Basic Operators</h2>
+            <br>
+            <h4>Arithmetic Operators</h4>
+            <p>Just as any other programming languages, the addition, subtraction, multiplication, and division operators can be used with numbers.</p>
+            <p>Accessing an index which does not exist generates an exception (an error).</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <p>Try to predict what the answer will be. Does python follow order of operations?</p>
+            <p>Another operator available is the modulo (%) operator, which returns the integer remainder of the division. dividend % divisor = remainder.</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <p>Using two multiplication symbols makes a power relationship.</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <h2>Using Operators with Lists</h2>
+            <p>Lists can be joined with the addition operators:</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <p>Just as in strings, Python supports forming new lists with a repeating sequence using the multiplication operator:</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <h2>String Formatting</h2>
+            <p>Python uses C-style string formatting to create new, formatted strings. The "%" operator is used to format a set of variables enclosed in a "tuple" (a fixed size list), together with a format string, which contains normal text together with "argument specifiers", special symbols like "%s" and "%d".</p>
+            <p>Let's say you have a variable called "name" with your user name in it, and you would then like to print(out a greeting to that user.)</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>            
+            <p>To use two or more argument specifiers, use a tuple (parentheses):</p>
+            <p>Let's say you have a variable called "name" with your user name in it, and you would then like to print(out a greeting to that user.)</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>            
+            <h4>Basic String Operations</h4>
+            <p>The first thing you learned was printing a simple sentence. This sentence was stored by Python as a string. However, instead of immediately printing strings out, we will explore the various things you can do to them. You can also use single quotes to assign a string. However, you will face problems if the value to be assigned itself contains single quotes. For example to assign the string in these bracket(single quotes are ' ') you need to use double quotes only like this</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>             
+            <p>That prints out 12, because "Hello world!" is 12 characters long, including punctuation and spaces.</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br> 
+            <p>
+            This prints a slice of the string, starting at index 3, and ending at index 6. But why 6 and not 7? Again, most programming languages do this - it makes doing math inside those brackets easier.
+            </p>
+            <p>If you just have one number in the brackets, it will give you the single character at that index. If you leave out the first number but keep the colon, it will give you a slice from the start to the number you left in. If you leave out the second number, it will give you a slice from the first number to the end.
+            </p>
+            <p>You can even put negative numbers inside the brackets. They are an easy way of starting at the end of the string instead of the beginning. This way, -3 means "3rd character from the end".
+            </p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br> 
+            <p>Python uses boolean logic to evaluate conditions. The boolean values True and False are returned when an expression is compared or evaluated. You Can View the different operators here, and try them out in the emulator found under resources</p>
+            <br>
+            <h4>Python Comparison Operators</h4>
+            <p>Comparison operators are used to compare two values:</p>
+            <img style=" 40px;height: 400px;width: 1050px"; src= images/arithmetic.jpg>
+            <p style="font-size:12px ;color:#E0E0E0">“Python Operators.” Python Operators, https://www.w3schools.com/python/python_operators.asp.</p>
+            <br>
+            <h4>Python Logical Operators</h4>
+            <p>Logical operators are used to combine conditional statements:</p>
+            <img style=" 40px;height: 700px;width: 1050px"; src= images/assignment.jpg>
+            <p style="font-size:12px ;color:#E0E0E0">“Python Operators.” Python Operators, https://www.w3schools.com/python/python_operators.asp.</p>
+            <br>
+            <h4>Python Identity Operators</h4>
+            <p>Identity operators are used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location:</p>
+            <img style=" 40px;height: 160px;width: 1050px"; src= images/identity.jpg>
+            <p style="font-size:12px ;color:#E0E0E0">“Python Operators.” Python Operators, https://www.w3schools.com/python/python_operators.asp.</p>
+            <br>
+            <h4>Python Membership Operators</h4>
+            <p>Membership operators are used to test if a sequence is presented in an object:</p>
+            <img style=" 40px;height: 160px;width: 1050px"; src= images/membership.jpg>
+            <p style="font-size:12px ;color:#E0E0E0">“Python Operators.” Python Operators, https://www.w3schools.com/python/python_operators.asp.</p>
+            <br>
+            <h4>Python Bitwise Operators</h4>
+            <p>Bitwise operators are used to compare (binary) numbers:</p>
+            <img style=" 40px;height: 320px;width: 1050px"; src= images/bitwise.jpg>
+            <p style="font-size:12px ;color:#E0E0E0">“Python Operators.” Python Operators, https://www.w3schools.com/python/python_operators.asp.</p>
+            <br>
+            <h2>Loops</h2>
+            <h4>The "for" loop</h4>
+            <p>For loops iterate over a given sequence. Here is an example:</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <p>For loops can iterate over a sequence of numbers using the "range" and "xrange" functions. The difference between range and xrange is that the range function returns a new list with numbers of that specified range, whereas xrange returns an iterator, which is more efficient. (Python 3 uses the range function, which acts like xrange). Note that the range function is zero based.</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <h4>"while" loops</h4>
+            <p>While loops repeat as long as a certain boolean condition is met. For example:</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <h4>"break" and "continue" statements</h4>
+            <p><a style="color:red">break</a> is used to exit a for loop or a while loop, whereas <a style="color:red">continue</a> is used to skip the current block, and return to the "for" or "while" statement. A few examples:</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <h4>Can we use "else" clause for loops?</h4>
+            <p>Unlike languages like C,CPP.. we can use <a style="color:red">else</a> for loops. When the loop condition of "for" or "while" statement fails then code part in "else" is executed. If a <a style="color:red">break</a> statement is executed inside the for loop then the "else" part is skipped. Note that the "else" part is executed even if there is a <a style="color:red">continue</a> statement.<p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <h2>Classes</h2>
+            <p>Objects are an encapsulation of variables and functions into a single entity. Objects get their variables and functions from classes. Classes are essentially a template to create your objects.</p>
+            <p>A very basic class would look something like this:</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <p>We'll explain why you have to include that "self" as a parameter a little bit later. First, to assign the above class(template) to an object you would do the following:</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <p>Now the variable "myobjectx" holds an object of the class "MyClass" that contains the variable and the function defined within the class called "MyClass".</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <h4>Accessing Object Variables</h4>
+            <p>To access the variable inside of the newly created object "myobjectx" you would do the following:</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <p>So for instance the below would output the string "blah":</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <p>You can create multiple different objects that are of the same class(have the same variables and functions defined). However, each object contains independent copies of the variables defined in the class. For instance, if we were to define another object with the "MyClass" class and then change the string in the variable above:</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <h4>Accessing Object Functions</h4>
+            <p>To access a function inside of an object you use notation similar to accessing a variable:</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <p>The above would print out the message, "This is a message inside the class."</p>
+            <h4>init()</h4>
+            The <a style="color:red">__init__()</a> function, is a special function that is called when the class is being initiated. It's used for asigning values in a class.
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <h2>Dictionaries</h2>
+            <p>A dictionary is a data type similar to arrays, but works with keys and values instead of indexes. Each value stored in a dictionary can be accessed using a key, which is any type of object (a string, a number, a list, etc.) instead of using its index to address it.
+            </p>
+            <p>
+            For example, a database of phone numbers could be stored using a dictionary like this:
+            </p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <p>
+            Alternatively, a dictionary can be initialized with the same values in the following notation:
+            </p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <h4>Iterating over dictionaries</h4>
+            <p>
+            Dictionaries can be iterated over, just like a list. However, a dictionary, unlike a list, does not keep the order of the values stored in it. To iterate over key value pairs, use the following syntax:
+            </p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
+            <h4>Removing a value</h4>
+            <p>To remove a specified index, use  this notations:</p>
+            <iframe src="https://avms-python-emulator.netlify.app/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="800px" allowfullscreen></iframe>
+            <br>
+            <br>
           </div>
         </div>
       </div>
     </section>
-
-
         <footer style="background-color: #1a0600"; class="site-footer" role="contentinfo">
         <div class="row">
           <div class="col-12 text-md-center text-left">

@@ -1878,10 +1878,16 @@
 \n\
 # Python IDE created by AVM\n\
 \n\
-x = 1\n\
-if x == 1:\n\
-    # indented four spaces\n\
-    print('x is 1.')\n\
+class NumberHolder:\n\
+\n\
+   def __init__(self, number):\n\
+       self.number = number\n\
+\n\
+   def returnNumber(self):\n\
+       return self.number\n\
+\n\
+var = NumberHolder(7)\n\
+print(var.returnNumber()) #Prints '7'\n\
 \n\
 "; var prev_result = 'in'; var site_url = "https://www.online-python.com/"
         var base_url = "https://www.online-python.com/"

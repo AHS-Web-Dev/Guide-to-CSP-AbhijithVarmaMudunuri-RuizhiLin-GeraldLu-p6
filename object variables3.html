@@ -1877,11 +1877,20 @@
     <script>ace.require("ace/ext/language_tools"); var editor = ace.edit("editor"); ace.require('ace/ext/settings_menu').init(editor); var editor_cnt = 1, editor_index = 1, active_editor = 1, editor_session = []; var request, init_ts, open_file_name; var lang = 'python3'; default_content = "\
 \n\
 # Python IDE created by AVM\n\
+class MyClass:\n\
+    variable = 'blah'\n\
 \n\
-x = 1\n\
-if x == 1:\n\
-    # indented four spaces\n\
-    print('x is 1.')\n\
+    def function(self):\n\
+        print('This is a message inside the class.')\n\
+\n\
+myobjectx = MyClass()\n\
+myobjecty = MyClass()\n\
+\n\
+myobjecty.variable = "yackity"\n\
+\n\
+# Then print out both values\n\
+print(myobjectx.variable)\n\
+print(myobjecty.variable)\n\
 \n\
 "; var prev_result = 'in'; var site_url = "https://www.online-python.com/"
         var base_url = "https://www.online-python.com/"
