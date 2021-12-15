@@ -122,7 +122,27 @@
     <body>
         
         <!-- Start Form -->
+    
+    <div class="top-shadow"></div>
+
+    <div class="inner-page">
+    <div class="slider-item" style="background-image: url('images/csing.jpg');">
         
+        <div class="container">
+          <div class="row slider-text align-items-center justify-content-center">
+            <div class="col-md-8 text-center col-sm-12 element-animate pt-5">
+              <h1 class="pt-5"><span>Chapter 1</span></h1>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- END slider -->
+    </div>
+
+    <section class="section blog element-animate">
+      <div class="container">    
         <div class="container">
             <h1 class="text-center">Contact Me</h1>
             <form class="contact-form" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
