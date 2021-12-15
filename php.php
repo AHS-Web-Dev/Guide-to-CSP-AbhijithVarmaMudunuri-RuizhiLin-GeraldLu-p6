@@ -1,45 +1,3 @@
-<?php
-
-    // Check if User Coming From A Request
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        
-        // Assign Variables
-        $user = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
-        $mail = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-        $cell = filter_var($_POST['cellphone'], FILTER_SANITIZE_NUMBER_INT);
-        $msg  = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
-        
-        // Creating Array of Errors
-        $formErrors = array();
-        if (strlen($user) <= 3) {
-            $formErrors[] = 'Username Must Be Larger Than <strong>3</strong> Characters';
-        }
-        if (strlen($msg) < 10) {
-            $formErrors[] = 'Message Can\'t Be Less Than <strong>10</strong> Characters'; 
-        }
-        
-        // If No Errors Send The Email [ mail(To, Subject, Message, Headers, Parameters) ]
-        
-        $headers = 'From: ' . $mail . '\r\n';
-        $myEmail = 'osama.elzero@gmail.com';
-        $subject = 'Contact Form';
-        
-        if (empty($formErrors)) {
-            
-            mail($myEmail, $subject, $msg, $headers);
-            
-            $user = '';
-            $mail = '';
-            $cell = '';
-            $msg = '';
-            
-            $success = '<div class="alert alert-success">We Have Recieved Your Message</div>';
-            
-        }
-        
-    }
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,10 +11,7 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/fnt.css">
-    <link rel="stylesheet" href="css/but.css">
-    <link rel="stylesheet" href="css/contact.css">
+
     <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
 
@@ -119,10 +74,8 @@
         </div>
       </nav>
     </header>
-    <body>
-        
-        <!-- Start Form -->
-    
+    <!-- END header -->
+
     <div class="top-shadow"></div>
 
     <div class="inner-page">
@@ -142,9 +95,15 @@
     </div>
 
     <section class="section blog element-animate">
-      <div class="container">    
-        <div class="container">
-            <h1 class="text-center">Contact Me</h1>
+      <div class="container">
+
+        <div class="row justify-content-center mb-5 ">
+          <div class="col-md-8 text-center">
+            <h2 class=" heading mb-4">Introduction to Computer Science</h2>
+            <p class="mb-5 lead">By the end of this chapter, you will be able to recount the defintion of computer science, history of computer, and the diffrent generations of computers. </p>
+          </div>
+        </div>
+                    <h1 class="text-center">Contact Me</h1>
             <form class="contact-form" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
                 <?php if (! empty($formErrors)) { ?>
                 <div class="alert alert-danger alert-dismissible" role="start">
@@ -209,9 +168,11 @@
                 <i class="fa fa-send fa-fw send-icon"></i>
             </form>
         </div>
-        
-        <!-- End Form -->
-        
+        </div>
+      </div>
+    </section>
+
+
         <footer style="background-color: #1a0600"; class="site-footer" role="contentinfo">
         <div class="row">
           <div class="col-12 text-md-center text-left">
@@ -235,9 +196,6 @@
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/js1.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/js2.js"></script>
 
     <script src="js/main.js"></script>
     
