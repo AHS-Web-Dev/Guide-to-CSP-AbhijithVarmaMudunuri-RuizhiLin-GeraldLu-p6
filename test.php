@@ -1,44 +1,34 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
-
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
-
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
+$name="localhost";
+$username = "root";
+$password = "";
+$database = "lml";
+$connect=mysqli_connect($name,$username,$password,$database);
+if(!$connect)
+{
+  die("Could not connect" . mysqli_connect_error());
+}
+if(isset($_POST['sub']))
+{
+  $username1 = $_POST['username'];
+  $message = $_POST['message'];
+  $email = $_POST['email'];
+  $cellphone = $_POST['cellphone'];
+  $sql_query = "INSERT INTO lmldata (username1,message,email,cellphone)
+  VALUES ('$username1','$message','$email','$cellphone')";
+  if(mysqli_query($connect, $sql_query))
+  {
+    echo "Connected";
   }
-
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address; 
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
-
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
-
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
-
-  echo $contact->send();
+  else
+  {
+    echo "Error: " . $sql . "" . mysqli_error($connect);
+  }
+  mysqli_close($connect);
+}
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -117,80 +107,84 @@
       </nav>
     </header>
     <!-- END header -->
-    <section id="contact" class="section-bg">
 
-      <div class="container" data-aos="fade-up">
+    <div class="top-shadow"></div>
 
-        <div class="section-header">
-          <h2>Contact Us</h2>
-          <p>Let us know about any questions or concerns.</p>
-        </div>
-
-        <div class="row contact-info">
-
-          <div class="col-md-4">
-<!--            <div class="contact-address">-->
-<!--              <i class="bi bi-geo-alt"></i>-->
-<!--              <h3>Address</h3>-->
-<!--              <address>A108 Adam Street, NY 535022, USA</address>-->
-<!--            </div>-->
-          </div>
-
-<!--          <div class="col-md-4">-->
-<!--            <div class="contact-phone">-->
-<!--              <i class="bi bi-phone"></i>-->
-<!--              <h3>Phone Number</h3>-->
-<!--              <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>-->
-<!--            </div>-->
-<!--          </div>-->
-
-          <div class="col-md-4">
-            <div class="contact-email">
-              <i class="bi bi-envelope"></i>
-              <h3>Email</h3>
-              <p><a href="mailto:jahsh@interhax.org">contact@itnerhax.org</a></p>
+    <div class="inner-page">
+    <div class="slider-item" style="background-image: url('images/contact.jpg');">
+        
+        <div class="container">
+          <div class="row slider-text align-items-center justify-content-center">
+            <div class="col-md-8 text-center col-sm-12 element-animate pt-5">
+              <h1 class="pt-5"><span>Contact Us</span></h1>
             </div>
           </div>
-
-        </div>
-
-        <div class="form">
-<!--          <form action="forms/contact.php" method="post" role="form" class="php-email-form">-->
-<!--          <form action="https://mailthis.to/tointerhax@gmail.com" method="POST"> -->
-          <form action="https://send.pageclip.co/1uAoxEcwh4hu14JGSEYRGkWszcrMDb7w" className="pageclip-form" method="post">
-            <div class="row">
-              <div class="form-group col-md-6">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-              </div>
-              <div class="form-group col-md-6 mt-3 mt-md-0">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-              </div>
-            </div>
-            <div class="form-group mt-3">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-            </div>
-            <div class="form-group mt-3">
-              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-            </div>
-            <div class="my-3">
-<!--              <div class="loading">Loading</div>
-             <div class="error-message"></div>
-             <div class="sent-message">Your message has been sent. Thank you!</div> -->
-            </div>
-            <div class="text-center"><button class="pageclip-form__submit" type="submit" value="Send Email">Send Message</button></div>
-<!--             <button class="pageclip-form__submit" type="button">
-              <span>Submit</span>
-            </button> -->
-          </form>
         </div>
 
       </div>
-<!--      <form action="https://mailthis.to/you@mail.com" method="POST">-->
-<!--    <input type="text" name="name" placeholder="Your name">-->
-<!--    <input type="email" name="_replyto" placeholder="Your email">-->
-<!--    <input type="submit" value="Send Email">-->
-</form>
+    </div>
+    <!-- END slider -->
+    </div>
 
+    <section class="section border-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-5 order-2">
+            <form action="connectDB.php" method="post">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="username" class="form-control ">
+                </div>
+                <div class="col-md-6 form-group">
+                  <label for="phone">Phone</label>
+                  <input type="text" name="cellphone" id="phone" class="form-control ">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" class="form-control ">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <label for="message">Write Message</label>
+                  <textarea name="message" id="message" class="form-control " cols="30" rows="8"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="submit" name="sub" value="Send Message" class="btn btn-primary px-3 py-3">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 order-2 mb-5">
+            <div class="row justify-content-right">
+              <div class="col-md-8 mx-auto contact-form-contact-info">
+                <p class="d-flex">
+                  <span class="ion-ios-location icon mr-5"></span>
+                  <span>36300 Fremont Blvd, Fremont, CA 94536</span>
+                </p>
+
+                <p class="d-flex">
+                  <span class="ion-ios-telephone icon mr-5"></span>
+                  <span>(510) 796-1776</span>
+                </p>
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
         <footer style="background-color: #1a0600"; class="site-footer" role="contentinfo">
         <div class="row">
