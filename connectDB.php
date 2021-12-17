@@ -18,7 +18,7 @@ if(isset($_POST['sub']))
   VALUES ('$username1','$message','$email','$cellphone')";
   if(mysqli_query($connect, $sql_query))
   {
-    echo "Connected";
+    echo "connect.html";
   }
   else
   {
