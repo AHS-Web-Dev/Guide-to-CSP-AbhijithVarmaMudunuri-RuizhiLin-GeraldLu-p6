@@ -103,7 +103,7 @@
             <p class="mb-5 lead">By the end of this chapter, you will be able to recount the defintion of computer science, history of computer, and the diffrent generations of computers. </p>
           </div>
         </div>
-                    <h1 class="text-center">Contact Me</h1>
+          <h1 class="text-center">Contact Me</h1>
             <form class="contact-form" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
                 <?php if (! empty($formErrors)) { ?>
                 <div class="alert alert-danger alert-dismissible" role="start">
