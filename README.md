@@ -1,2 +1,12 @@
 # Guide-to-CSP-AbhijithVarmaMudunuri-RuizhiLin-GeraldLu-p6
 Semester 1 Project
+
+Objective: To provide future students with resources to excel and succeed in APCSP. This is a guide for the first semester of CSP. The purpose of the website is to give a quick overview over some of the topics in CSP that Mr. Millard went over during class. It is to serve as a memory refresher to help students review some of the important concepts from chapters 1 to 7. The complimentary quiz for each chapter is to check the student’s basic understandings of the principles of computer science.
+Home: Navigation Bar (Top Tight), background header image, title subheadings, text boxes, links, logo
+Chapters: Nav. Bar (Top right), background header image, title subtitle, textboxes, image links, logo
+
+Abhijith Varma Mudunuri - Worked on Frontend and Local Backend primarily. Created Base template pages for my team to use in order to work on their respective content. Pushed all files for my team in order to block any merge requests. Created small projects for the website; calculator, python emulator, snake game, car game, quiz js, contact form js. I also helped work on the PHP and notes although it wasn’t my primary job or primary work. I basically created every HTML page.
+
+Gerald - Worked on adding notes to the html files for the chapter notes. Also, edited the javascript files to implement various questions for the quizzes. Helped troubleshoot certain problems with the html web pages and styling errors. Also worked on creating the contact form to make the website more interactive. I connected the local frontend (the contact.html form) to the local backend (MySQL & PHP) using XAMPP. I made sure to specify the action as “connectDB.php” in the form tag for contact.html to connect the html file to the PHP. Anything inputted into the contact form was able to store information into the database. 
+
+Ruizhi -  Designed the looks of the website, linked all the javascript quizzes to their respective html files, chose all the photos for the website, decided the content of the website, typed up and formatted the notes and quizzes, worked on the python emulator and participated to set up the database, worked on the navigation bar, contributed in styling the website using javascript and css, and tested the car/snake games. I also created the different JS quizzes and helped embed the calculator to the website on the overlay.
